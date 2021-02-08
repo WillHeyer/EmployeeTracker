@@ -15,8 +15,6 @@ const connection = mysql.createConnection({
     database: "employee_trackerDB"
 })
 
-
-// Main Menu Question and Switch
 const main = () => {
 
     inquirer
@@ -50,9 +48,7 @@ const main = () => {
 
     }
 
-    // View All Employees
     const getEmployeeInformation = () => {
-        // SQL Database?
 
         connection.query("SELECT * FROM Employee", (err, queryResult) => {
 
@@ -63,7 +59,6 @@ const main = () => {
         })
     }
 
-    //View Employees By Department
     const getDepartmentInformation = () => {
 
         inquirer
@@ -96,7 +91,6 @@ const main = () => {
         })
     }
 
-    // View Employees By Roles
     const getEmployeeRolesInfo = () => {
 
       connection.query("SELECT * FROM Role ", (err, queryResult) => {
@@ -108,7 +102,6 @@ const main = () => {
         })
     }
 
-    // Add New Employee
     const getNewEmployeeInfo = () => {
 
         inquirer
@@ -145,7 +138,6 @@ const main = () => {
             })
     }
 
-    // Add New Department
     const getNewDepartmentInfo = () => {
 
         inquirer
@@ -168,7 +160,6 @@ const main = () => {
             })
     }
 
-    // Add New Role
     const getNewRoleInfo = () => {
 
         inquirer
@@ -199,7 +190,6 @@ const main = () => {
             })
     }
 
-    // Update A Role
     const getUpdateRoleInfo = () => {
 
         inquirer
